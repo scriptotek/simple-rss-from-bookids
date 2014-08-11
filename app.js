@@ -84,16 +84,18 @@
 
         	console.log('Trying to generate feed.');
 
+            var postData = {
+                title: vm.title,
+                description: vm.description,
+                link: vm.link,
+                entries: vm.entries
+            };
+
         	$http({
         		url: 'generator.php',
         		method: 'POST',
         		params: {
-    				data: {
-    					title: vm.title,
-    					description: vm.description,
-    					link: vm.link,
-    					entries: vm.entries
-    				}
+    				data: postData
     			},
         		headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         	})

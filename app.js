@@ -67,7 +67,7 @@
                 newEntry.description = data.description;
                 newEntry.link = 'http://ask.bibsys.no/ask/action/show?kid=biblio&cmd=reload&pid=' + vm.bookId;
                 // add this new entry:
-                vm.entries.push(newEntry);
+                vm.entries.splice(0, 0, newEntry);
 
                 console.log('New entry added!');
 

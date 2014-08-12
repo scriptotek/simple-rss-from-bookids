@@ -43,6 +43,8 @@
 				vm.link = vm.googleApiResult.link;
 				vm.title = vm.googleApiResult.title;
 				vm.entries = vm.entries.concat(vm.googleApiResult.entries);
+
+                vm.generateFeed();
 			})
 			.error(function(err) {
 				console.log('Unable to load data from feed:')
@@ -71,6 +73,8 @@
 
                 console.log('New entry added!');
 
+                vm.generateFeed();
+
             })
             .error(function(err) {
                 console.log('Error in addNew');
@@ -83,6 +87,7 @@
         vm.generateFeed = function() {
 
         	console.log('Trying to generate feed.');
+            vm.rss = 'Generating...';
 
             var postData = {
                 title: vm.title,

@@ -39,78 +39,74 @@
 			</form>
 		</div>
 
-		<div ng-show="MainCtrl.title">
-
-			<div>
-				<h3>Information about your feed:</h3>
-				<form>
-					<div class="form-group">
-						<label for="title">Title</label>
-						<input type="text"
-							name="title"
-							ng-model="MainCtrl.title"
-							class="form-control"
-							placeholder="Enter feed title">
-					</div>
-					<div class="form-group">
-						<label for="description">Description</label>
-						<input type="text"
-							name="description"
-							ng-model="MainCtrl.description"
-							class="form-control"
-							placeholder="Enter feed description">
-					</div>
-					<div class="form-group">
-						<label for="link">Link</label>
-						<input type="text"
-							name="link"
-							ng-model="MainCtrl.link"
-							class="form-control"
-							placeholder="Enter feed link">
-					</div>
-				</form>
-			</div>
-
-			<div>
-				<h3>Add new entry:</h3>
-				<form ng-submit="MainCtrl.addNew()" name="addForm">
-					<div class="form-group">
-						<label for="bookId">Book ID:</label>
-						<input type="text"
-							name="bookId"
-							ng-model="MainCtrl.bookId"
-							class="form-control input-lg"
-							placeholder="Enter feed URL">
-					</div>
-					<div class="form-group text-right">
-						<button
-							class="btn btn-primary btn-lg">
-							Add
-						</button>
-					</div>
-				</form>
-			</div>
-
-			<div ng-show="MainCtrl.entries.length>0">
-				<h3>Entries in feed:</h3>
-				<ul>
-					<li ng-repeat="entry in MainCtrl.entries">
-						<h4>{{ entry.title }} <small>{{ entry.publishedDate }}</small></h4>
-						<p>{{ entry.link }}</p>
-					</li>
-				</ul>
-			</div>
-
-			<div ng-show="MainCtrl.rss">
-				<textarea
-					class="form-control"
-					rows="50"
-					ng-model="MainCtrl.rss">
-
-				</textarea>
-			</div>
+		<div ng-show="MainCtrl.entries.length>0">
+			<h3>Information about your feed:</h3>
+			<form>
+				<div class="form-group">
+					<label for="title">Title</label>
+					<input type="text"
+						name="title"
+						ng-model="MainCtrl.title"
+						class="form-control"
+						placeholder="Enter feed title">
+				</div>
+				<div class="form-group">
+					<label for="description">Description</label>
+					<input type="text"
+						name="description"
+						ng-model="MainCtrl.description"
+						class="form-control"
+						placeholder="Enter feed description">
+				</div>
+				<div class="form-group">
+					<label for="link">Link</label>
+					<input type="text"
+						name="link"
+						ng-model="MainCtrl.link"
+						class="form-control"
+						placeholder="Enter feed link">
+				</div>
+			</form>
 		</div>
-		
+
+		<div ng-show="MainCtrl.entries.length>0">
+			<h3>Add new entry:</h3>
+			<form ng-submit="MainCtrl.addNew()" name="addForm">
+				<div class="form-group">
+					<label for="bookId">Book ID:</label>
+					<input type="text"
+						name="bookId"
+						ng-model="MainCtrl.bookId"
+						class="form-control input-lg"
+						placeholder="Enter feed URL">
+				</div>
+				<div class="form-group text-right">
+					<button
+						class="btn btn-primary btn-lg">
+						Add
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<div ng-show="MainCtrl.entries.length>0">
+			<h3>Entries in feed:</h3>
+			<ul>
+				<li ng-repeat="entry in MainCtrl.entries">
+					<h4>{{ entry.title }} <small>{{ entry.publishedDate }}</small></h4>
+					<p>{{ entry.link }}</p>
+				</li>
+			</ul>
+		</div>
+
+		<div ng-show="MainCtrl.rss">
+			<textarea
+				class="form-control"
+				rows="50"
+				ng-model="MainCtrl.rss">
+
+			</textarea>
+		</div>
 	</div>
 
 </body>

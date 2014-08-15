@@ -86,6 +86,11 @@
 
         vm.generateFeed = function() {
 
+            /*
+            add validation: should we generate when user hasn't set title,
+            desc, link and so on?
+            */
+
         	console.log('Trying to generate feed.');
             vm.rss = 'Generating...';
 

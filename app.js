@@ -67,7 +67,7 @@
                 var newEntry = {};
                 newEntry.title = data.title;
                 newEntry.description = data.description;
-                newEntry.link = 'http://bibsys-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UBO&docId=BIBSYS_ILS' + vm.bookId;
+                newEntry.link = 'http://bibsys-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/dlDisplay.do?vid=UBO&amp;docId=BIBSYS_ILS' + vm.bookId;
                 // add this new entry:
                 vm.entries.splice(0, 0, newEntry);
 
